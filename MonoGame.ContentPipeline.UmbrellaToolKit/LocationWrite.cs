@@ -27,10 +27,10 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
             for (int x = 0; x < value.translations_en.item.Length; x++) output.Write(value.translations_en.item[x]);
             for (int x = 0; x < value.translations_pt.item.Length; x++) output.Write(value.translations_pt.item[x]);
         }
-
+        
         public override string GetRuntimeReader(TargetPlatform targetPlatform)
         {
-            return "UmbrellaToolKit.Location, UmbrellaToolKit";
+            return "UmbrellaToolKit.Location.LocationRender, UmbrellaToolKit";
         }
     }
 }
