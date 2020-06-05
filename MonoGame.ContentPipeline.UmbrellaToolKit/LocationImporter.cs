@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
+using System.Xml.Serialization;
 using Microsoft.Xna.Framework.Content.Pipeline;
 
-using TInput = System.String;
-using TOutput = System.String;
-
+using TInput = Location;
 namespace MonoGame.ContentPipeline.UmbrellaToolKit
 {
     /// <summary>
@@ -20,14 +16,16 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
     /// extension, display name, and default processor for this importer.
     /// </summary>
 
-    [ContentImporter(".xyz", DisplayName = "XYZ Importer", DefaultProcessor = "ContentProcessor1")]
-    public class ContentImporter1 : ContentImporter<TInput>
+    [ContentImporter(".UmbrellaLocation", DisplayName = "Location Importer", DefaultProcessor = "LocationProcessor")]
+    public class LocationImporter : ContentImporter<TInput>
     {
-
         public override TInput Import(string filename, ContentImporterContext context)
         {
-            // TODO: process the input object, and return the modified data.
-            throw new NotImplementedException();
+            var serializer = new XmlSerializer(typeof(Location));
+            using (StreamReader stream = new StreamReader(filename))
+            {
+                return (Location)serializer.Deserialize(stream);
+            }
         }
 
     }

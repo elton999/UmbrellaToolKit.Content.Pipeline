@@ -1,8 +1,12 @@
 ﻿using System;
 using Microsoft.Xna.Framework.Content.Pipeline;
+using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
+using System.Text;
 // TODO: replace these with the processor input and output types.
-using TInput = System.String;
-using TOutput = System.String;
+using TInput = Location;
+using TOutput = Location;
 
 namespace MonoGame.ContentPipeline.UmbrellaToolKit
 {
@@ -17,13 +21,12 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
     /// TODO: change the ContentProcessor attribute to specify the correct
     /// display name for this processor.
     /// </summary>
-    [ContentProcessor(DisplayName = "MonoGame.ContentPipeline.UmbrellaToolKit.ContentProcessor1")]
-    public class ContentProcessor1 : ContentProcessor<TInput, TOutput>
+    [ContentProcessor(DisplayName = "Location Processor")]
+    public class LocationProcessor : ContentProcessor<TInput, TOutput>
     {
         public override TOutput Process(TInput input, ContentProcessorContext context)
         {
-            // TODO: process the input object, and return the modified data.
-            throw new NotImplementedException();
+            return input;
         }
     }
 }
