@@ -3,7 +3,7 @@ using System.IO;
 using System.Xml.Serialization;
 using Microsoft.Xna.Framework.Content.Pipeline;
 
-using TInput = Location;
+using TInput = ConfigMap;
 namespace MonoGame.ContentPipeline.UmbrellaToolKit
 {
     /// <summary>
@@ -16,15 +16,15 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
     /// extension, display name, and default processor for this importer.
     /// </summary>
 
-    [ContentImporter(".UmbrellaLocation", DisplayName = "Location Importer  - UmbrellaToolKit", DefaultProcessor = "LocationProcessor")]
-    public class LocationImporter : ContentImporter<TInput>
+    [ContentImporter(".tmx", DisplayName = "Tile Map Importer  - UmbrellaToolKit", DefaultProcessor = "TileMapProcessor")]
+    public class TileMapImporter : ContentImporter<TInput>
     {
         public override TInput Import(string filename, ContentImporterContext context)
         {
-            var serializer = new XmlSerializer(typeof(Location));
+            var serializer = new XmlSerializer(typeof(ConfigMap));
             using (StreamReader stream = new StreamReader(filename))
             {
-                return (Location)serializer.Deserialize(stream);
+                return (ConfigMap)serializer.Deserialize(stream);
             }
         }
 

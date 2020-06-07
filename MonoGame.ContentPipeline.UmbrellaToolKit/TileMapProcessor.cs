@@ -5,8 +5,8 @@ using System.Xml.Serialization;
 using System.IO;
 using System.Text;
 // TODO: replace these with the processor input and output types.
-using TInput = Location;
-using TOutput = Location;
+using TInput = ConfigMap;
+using TOutput = ConfigMap;
 
 namespace MonoGame.ContentPipeline.UmbrellaToolKit
 {
@@ -21,8 +21,8 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
     /// TODO: change the ContentProcessor attribute to specify the correct
     /// display name for this processor.
     /// </summary>
-    [ContentProcessor(DisplayName = "Location Processor  - UmbrellaToolKit")]
-    public class LocationProcessor : ContentProcessor<TInput, TOutput>
+    [ContentProcessor(DisplayName = "Tile Map Processor - UmbrellaToolKit")]
+    public class TileMapProcessor : ContentProcessor<TInput, TOutput>
     {
         public override TOutput Process(TInput input, ContentProcessorContext context)
         {

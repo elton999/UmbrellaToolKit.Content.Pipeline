@@ -3,7 +3,7 @@ using System.IO;
 using System.Xml.Serialization;
 using Microsoft.Xna.Framework.Content.Pipeline;
 
-using TInput = Location;
+using TInput = ConfigTileSet;
 namespace MonoGame.ContentPipeline.UmbrellaToolKit
 {
     /// <summary>
@@ -16,15 +16,15 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
     /// extension, display name, and default processor for this importer.
     /// </summary>
 
-    [ContentImporter(".UmbrellaLocation", DisplayName = "Location Importer  - UmbrellaToolKit", DefaultProcessor = "LocationProcessor")]
-    public class LocationImporter : ContentImporter<TInput>
+    [ContentImporter(".tsx", DisplayName = "Tileset Importer  - UmbrellaToolKit", DefaultProcessor = "TileSetProcessor")]
+    public class TileSetImporter : ContentImporter<TInput>
     {
         public override TInput Import(string filename, ContentImporterContext context)
         {
-            var serializer = new XmlSerializer(typeof(Location));
+            var serializer = new XmlSerializer(typeof(ConfigTileSet));
             using (StreamReader stream = new StreamReader(filename))
             {
-                return (Location)serializer.Deserialize(stream);
+                return (ConfigTileSet)serializer.Deserialize(stream);
             }
         }
 
