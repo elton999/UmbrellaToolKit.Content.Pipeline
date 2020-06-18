@@ -40,14 +40,21 @@
     <Reference Include="MonoGame.Framework.Content.Pipeline, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.Content.Pipeline.Portable.3.7.1.189\lib\portable-net45+win8+wpa81\MonoGame.Framework.Content.Pipeline.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\prototypes\TrueDetectiveProject\TecPrototype\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsepriteImporter.cs" />
+    <Compile Include="AsepriteProcessor.cs" />
+    <Compile Include="AsepriteWriter.cs" />
     <Compile Include="LocationImporter.cs" />
     <Compile Include="LocationProcessor.cs" />
+    <Compile Include="Model\AsepriteJson.cs" />
     <Compile Include="Model\ConfigMap.cs" />
     <Compile Include="Model\ConfigTileSet.cs" />
     <Compile Include="Model\Location.cs" />

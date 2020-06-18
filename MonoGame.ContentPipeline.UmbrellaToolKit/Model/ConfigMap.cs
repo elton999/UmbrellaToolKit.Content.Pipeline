@@ -55,13 +55,13 @@ public class ConifgObjects
     [XmlAttribute("type")]
     public string type { get; set; }
     [XmlAttribute("x")]
-    public string x { get; set; }
+    public float x { get; set; }
     [XmlAttribute("y")]
-    public string y { get; set; }
+    public float y { get; set; }
     [XmlAttribute("width")]
-    public string width { get; set; }
+    public float width { get; set; }
     [XmlAttribute("height")]
-    public string height { get; set; }
+    public float height { get; set; }
 }
 
 public class ConfigGroupsObjects
