@@ -30,7 +30,7 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
         
         public override string GetRuntimeReader(TargetPlatform targetPlatform)
         {
-            return "UmbrellaToolKit.Location.LocationRender, UmbrellaToolKit";
+            return "UmbrellaToolKit.Location.LocationReader, UmbrellaToolKit";
         }
     }
 }

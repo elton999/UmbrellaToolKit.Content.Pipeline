@@ -27,7 +27,6 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
             output.Write(((JArray)value["frames"]).Count);
             for (int i = 0; i < ((JArray)value["frames"]).Count; i++)
             {
-                output.Write((string)value["frames"][i]["filename"]);
                 output.Write((int)value["frames"][i]["frame"]["x"]);
                 output.Write((int)value["frames"][i]["frame"]["y"]);
                 output.Write((int)value["frames"][i]["frame"]["w"]);
