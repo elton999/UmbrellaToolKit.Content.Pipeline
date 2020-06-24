@@ -10,7 +10,7 @@ using TWrite = Location;
 namespace MonoGame.ContentPipeline.UmbrellaToolKit
 {
     [ContentTypeWriter]
-    public class LocationWriter : ContentTypeWriter<TWrite>
+    public class LocalizationWriter : ContentTypeWriter<TWrite>
     {
         protected override void Write(ContentWriter output, TWrite value)
         {
@@ -30,7 +30,7 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
         
         public override string GetRuntimeReader(TargetPlatform targetPlatform)
         {
-            return "UmbrellaToolKit.Location.LocationReader, UmbrellaToolKit";
+            return "UmbrellaToolKit.Localization.LocalizationReader, UmbrellaToolKit";
         }
     }
 }

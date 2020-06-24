@@ -21,8 +21,8 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
     /// TODO: change the ContentProcessor attribute to specify the correct
     /// display name for this processor.
     /// </summary>
-    [ContentProcessor(DisplayName = "Location Processor  - UmbrellaToolKit")]
-    public class LocationProcessor : ContentProcessor<TInput, TOutput>
+    [ContentProcessor(DisplayName = "Localization Processor  - UmbrellaToolKit")]
+    public class LocalizationProcessor : ContentProcessor<TInput, TOutput>
     {
         public override TOutput Process(TInput input, ContentProcessorContext context)
         {

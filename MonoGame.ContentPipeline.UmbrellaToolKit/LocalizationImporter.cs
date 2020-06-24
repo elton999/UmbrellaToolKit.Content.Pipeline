@@ -16,8 +16,8 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
     /// extension, display name, and default processor for this importer.
     /// </summary>
 
-    [ContentImporter(".UmbrellaLocation", DisplayName = "Location Importer  - UmbrellaToolKit", DefaultProcessor = "LocationProcessor")]
-    public class LocationImporter : ContentImporter<TInput>
+    [ContentImporter(".UmbrellaLocalization", DisplayName = "Localization Importer  - UmbrellaToolKit", DefaultProcessor = "LocalizationProcessor")]
+    public class LocalizationImporter : ContentImporter<TInput>
     {
         public override TInput Import(string filename, ContentImporterContext context)
         {

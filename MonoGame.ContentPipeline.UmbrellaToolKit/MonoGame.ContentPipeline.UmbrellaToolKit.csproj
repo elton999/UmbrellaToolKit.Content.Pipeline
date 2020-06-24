@@ -54,7 +54,6 @@
     <Compile Include="AsepriteWriter.cs" />
     <Compile Include="LocationImporter.cs" />
     <Compile Include="LocationProcessor.cs" />
-    <Compile Include="Model\AsepriteJson.cs" />
     <Compile Include="Model\ConfigMap.cs" />
     <Compile Include="Model\ConfigTileSet.cs" />
     <Compile Include="Model\Location.cs" />
