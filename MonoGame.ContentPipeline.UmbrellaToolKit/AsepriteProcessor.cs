@@ -7,7 +7,7 @@ using TOutput = Newtonsoft.Json.Linq.JObject;
 
 namespace MonoGame.ContentPipeline.UmbrellaToolKit
 {
-    [ContentProcessor(DisplayName = "Aseprite Processor  - UmbrellaToolKit")]
+    [ContentProcessor(DisplayName = "Aseprite Processor - UmbrellaToolKit")]
     public class AsepriteProcessor : ContentProcessor<TInput, TOutput>
     {
         public override TOutput Process(TInput input, ContentProcessorContext context)

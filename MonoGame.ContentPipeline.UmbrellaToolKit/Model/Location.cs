@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 using System.Collections.Generic;
 
 [Serializable()]
-[XmlRoot("location")]
+[XmlRoot("localization")]
 public class Location
 {
     [XmlElement("Tags")]

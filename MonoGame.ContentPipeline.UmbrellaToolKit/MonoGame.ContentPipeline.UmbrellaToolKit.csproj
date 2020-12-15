@@ -12,6 +12,8 @@
     <AssemblyName>MonoGame.ContentPipeline.UmbrellaToolKit</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,13 +54,20 @@
     <Compile Include="AsepriteImporter.cs" />
     <Compile Include="AsepriteProcessor.cs" />
     <Compile Include="AsepriteWriter.cs" />
-    <Compile Include="LocationImporter.cs" />
-    <Compile Include="LocationProcessor.cs" />
+    <Compile Include="LocalizationImporter.cs" />
+    <Compile Include="LocalizationProcessor.cs" />
     <Compile Include="Model\ConfigMap.cs" />
     <Compile Include="Model\ConfigTileSet.cs" />
     <Compile Include="Model\Location.cs" />
+    <Compile Include="Model\OgmoModel.cs" />
+    <Compile Include="OgmoImporter.cs" />
+    <Compile Include="OgmoProcessor.cs" />
+    <Compile Include="OgmoTileMapImporter.cs" />
+    <Compile Include="OgmoTileMapProcessor.cs" />
+    <Compile Include="OgmoTileMapWriter.cs" />
+    <Compile Include="OgmoWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LocationWrite.cs" />
+    <Compile Include="LocalizationWrite.cs" />
     <Compile Include="TileMapImporter.cs" />
     <Compile Include="TileMapProcessor.cs" />
     <Compile Include="TileSetImporter.cs" />
