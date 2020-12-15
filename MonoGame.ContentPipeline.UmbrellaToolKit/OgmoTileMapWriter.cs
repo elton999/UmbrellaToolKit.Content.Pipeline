@@ -32,49 +32,67 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
                 output.Write((int)value.layers[i].gridCellsY);
 
                 // data2D
-                output.Write((int)value.layers[i].data2D.Count);
-                for (var x = 0; x < value.layers[i].data2D.Count; x++)
+                if (value.layers[i].data2D != null)
                 {
-                    output.Write((int)value.layers[i].data2D[x].Count);
-                    for(var y = 0; x < value.layers[i].data2D[x].Count; y++)
+                    output.Write((int)value.layers[i].data2D.Count);
+                    for (var x = 0; x < value.layers[i].data2D.Count; x++)
                     {
-                        output.Write((int)value.layers[i].data2D[x][y]);
+                        output.Write((int)value.layers[i].data2D[x].Count);
+                        for (var y = 0; y < value.layers[i].data2D[x].Count; y++)
+                        {
+                            output.Write((int)value.layers[i].data2D[x][y]);
+                        }
                     }
-                }
+                } else
+                    output.Write((int)0);
 
                 // grid2D
-                output.Write((int)value.layers[i].grid2D.Count);
-                for (var x = 0; x < value.layers[i].grid2D.Count; x++)
+                if (value.layers[i].grid2D != null)
                 {
-                    output.Write((int)value.layers[i].grid2D[x].Count);
-                    for (var y = 0; x < value.layers[i].grid2D[x].Count; y++)
+                    output.Write((int)value.layers[i].grid2D.Count);
+                    for (var x = 0; x < value.layers[i].grid2D.Count; x++)
                     {
-                        output.Write((int)value.layers[i].grid2D[x][y]);
+                        output.Write((int)value.layers[i].grid2D[x].Count);
+                        for (var y = 0; y < value.layers[i].grid2D[x].Count; y++)
+                        {
+                            output.Write((int)value.layers[i].grid2D[x][y]);
+                        }
                     }
                 }
+                else
+                    output.Write((int)0);
 
                 // entities
-                output.Write((int)value.layers[i].entities.Count);
-                for(var e = 0; e < value.layers[i].entities.Count; e++)
+                if (value.layers[i].entities != null)
                 {
-                    output.Write((string)value.layers[i].entities[e].name);
-                    output.Write((string)value.layers[i].entities[e]._eid);
-                    output.Write((int)value.layers[i].entities[e].x);
-                    output.Write((int)value.layers[i].entities[e].y);
-                    output.Write((int)value.layers[i].entities[e].originX);
-                    output.Write((int)value.layers[i].entities[e].originY);
-                    output.Write((int)value.layers[i].entities[e].width);
-                    output.Write((int)value.layers[i].entities[e].height);
-                    output.Write((string)value.layers[i].entities[e].values);
-
-                    //nodes
-                    output.Write((int)value.layers[i].entities[e].nodes.Count);
-                    for (var n = 0; n < value.layers[i].entities[e].nodes.Count; n++)
+                    output.Write((int)value.layers[i].entities.Count);
+                    for (var e = 0; e < value.layers[i].entities.Count; e++)
                     {
-                        output.Write((int)value.layers[i].entities[e].nodes[n].x);
-                        output.Write((int)value.layers[i].entities[e].nodes[n].y);
+                        output.Write((string)value.layers[i].entities[e].name);
+                        output.Write((string)value.layers[i].entities[e]._eid);
+                        output.Write((int)value.layers[i].entities[e].x);
+                        output.Write((int)value.layers[i].entities[e].y);
+                        output.Write((int)value.layers[i].entities[e].originX);
+                        output.Write((int)value.layers[i].entities[e].originY);
+                        output.Write((int)value.layers[i].entities[e].width);
+                        output.Write((int)value.layers[i].entities[e].height);
+                        // output.Write((string)value.layers[i].entities[e].values);
+
+                        //nodes
+                        if (value.layers[i].entities[e].nodes != null)
+                        {
+                            output.Write((int)value.layers[i].entities[e].nodes.Count);
+                            for (var n = 0; n < value.layers[i].entities[e].nodes.Count; n++)
+                            {
+                                output.Write((int)value.layers[i].entities[e].nodes[n].x);
+                                output.Write((int)value.layers[i].entities[e].nodes[n].y);
+                            }
+                        } else
+                            output.Write((int)0);
                     }
                 }
+                else
+                    output.Write((int)0);
             }
         }
 

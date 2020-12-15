@@ -74,6 +74,6 @@ public class OgmoLevelLayerEntities
     public int originY;
     public int width;
     public int height;
-    public String values;
+    // public String values;
     public List<ogmoVector2> nodes;
 }

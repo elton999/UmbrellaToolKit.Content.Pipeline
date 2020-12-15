@@ -37,7 +37,7 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
         }
         public override string GetRuntimeReader(TargetPlatform targetPlatform)
         {
-            return "UmbrellaToolKit.Sprite.AsepriteReader, UmbrellaToolKit";
+            return "UmbrellaToolKit.Ogmo.TileMapReader, UmbrellaToolKit";
         }
     }
 
