@@ -60,7 +60,8 @@ public class OgmoLevelLayer
     public int gridCellsX;
     public int gridCellsY;
     public List<List<int>> data2D;
-    public List<List<int>> grid2D;
+    public List<List<string>> grid2D;
+    public List<List<List<int>>> dataCoords2D;
     public List<OgmoLevelLayerEntities> entities;
 }
 

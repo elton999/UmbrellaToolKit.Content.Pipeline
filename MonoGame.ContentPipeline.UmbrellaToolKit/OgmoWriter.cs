@@ -18,8 +18,8 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
             output.Write((string)value.name);
             output.Write((string)value.ogmoVersion);
             output.Write((string)value.backgroundColor);
-            output.Write((float)value.layerGridDefaultSize.x);
-            output.Write((float)value.layerGridDefaultSize.y);
+            output.Write((int)value.layerGridDefaultSize.x);
+            output.Write((int)value.layerGridDefaultSize.y);
 
             // layers
             output.Write((int)value.layers.Count);
@@ -28,8 +28,8 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
                 output.Write((string)value.layers[i].exportID);
                 output.Write((string)value.layers[i].definition);
                 output.Write((string)value.layers[i].name);
-                output.Write((float)value.layers[i].gridSize.x);
-                output.Write((float)value.layers[i].gridSize.y);
+                output.Write((int)value.layers[i].gridSize.x);
+                output.Write((int)value.layers[i].gridSize.y);
                 output.Write((int)value.layers[i].exportMode);
                 output.Write((int)value.layers[i].arrayMode);
                 
@@ -37,7 +37,7 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
         }
         public override string GetRuntimeReader(TargetPlatform targetPlatform)
         {
-            return "UmbrellaToolKit.Ogmo.TileMapReader, UmbrellaToolKit";
+            return "UmbrellaToolKit.Ogmo.TileSetReader, UmbrellaToolKit";
         }
     }
 

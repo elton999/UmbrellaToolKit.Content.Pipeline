@@ -55,12 +55,33 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
                         output.Write((int)value.layers[i].grid2D[x].Count);
                         for (var y = 0; y < value.layers[i].grid2D[x].Count; y++)
                         {
-                            output.Write((int)value.layers[i].grid2D[x][y]);
+                            output.Write((string)value.layers[i].grid2D[x][y]);
                         }
                     }
                 }
                 else
                     output.Write((int)0);
+
+                // dataCoords2D
+                if (value.layers[i].dataCoords2D != null)
+                {
+                    output.Write((int)value.layers[i].dataCoords2D.Count);
+                    for (var x = 0; x < value.layers[i].dataCoords2D.Count; x++)
+                    {
+                        output.Write((int)value.layers[i].dataCoords2D[x].Count);
+                        for (var y = 0; y < value.layers[i].dataCoords2D[x].Count; y++)
+                        {
+                            output.Write((int)value.layers[i].dataCoords2D[x][y].Count);
+                            for (var yy = 0; yy < value.layers[i].dataCoords2D[x][y].Count; yy++)
+                            {
+                                output.Write((int)value.layers[i].dataCoords2D[x][y][yy]);
+                            }
+                        }
+                    }
+                }
+                else
+                    output.Write((int)0);
+
 
                 // entities
                 if (value.layers[i].entities != null)
@@ -72,8 +93,8 @@ namespace MonoGame.ContentPipeline.UmbrellaToolKit
                         output.Write((string)value.layers[i].entities[e]._eid);
                         output.Write((int)value.layers[i].entities[e].x);
                         output.Write((int)value.layers[i].entities[e].y);
-                        output.Write((int)value.layers[i].entities[e].originX);
-                        output.Write((int)value.layers[i].entities[e].originY);
+                        output.Write((float)value.layers[i].entities[e].originX);
+                        output.Write((float)value.layers[i].entities[e].originY);
                         output.Write((int)value.layers[i].entities[e].width);
                         output.Write((int)value.layers[i].entities[e].height);
                         // output.Write((string)value.layers[i].entities[e].values);
